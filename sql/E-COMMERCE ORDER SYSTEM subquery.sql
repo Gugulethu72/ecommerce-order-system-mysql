@@ -1,0 +1,10 @@
+use ecommerce_order_system;
+
+SELECT 
+    FIRST_NAME,
+    LAST_NAME
+FROM CUSTOMERS
+WHERE CUSTOMER_ID IN (
+    SELECT CUSTOMER_ID
+    FROM ORDERS
+);
